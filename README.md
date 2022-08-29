@@ -23,6 +23,10 @@ SQL cheat sheet for simple sql commands.
 - [UNION](#union) - Merge two select command.
   <br>
 - [INSERT](#insert-into) - Insert a row to a table.
+  <br>
+- [UPDATE](#update) - Update a row or rows from table.
+  <br>
+- [DELETE](#delete) - Delete a row or rows from table.
 
 #
 
@@ -363,9 +367,33 @@ WHERE column1='jack';
 
 ## DELETE
 
-**DELETE**: Delete a row or rows.
+**DELETE**: Delete a row or rows from table.
 
 ```sql
 DELETE FROM table_name
 WHERE column1=20;
+```
+
+#
+
+## SELECT
+
+**SELECT INTO**: Backup a table columns and insert in the new table.
+
+```sql
+SELECT column1, column2
+INTO new_table
+FROM table_name
+WHERE column1 IN ("Iran", "Spain", "Italia");
+```
+
+<br>
+
+**INSERT INTO SELECT**: Back a table columns and insert in the available table.
+
+```sql
+INSERT INTO table2
+SELECT column1, column2
+FROM table1
+WHERE column1 > 10;
 ```

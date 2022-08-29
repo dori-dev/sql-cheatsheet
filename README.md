@@ -346,3 +346,26 @@ SELECT column1 FROM table2;
 INSERT INTO table_name(column1, column2, column3)
 VALUES ("Mohammad", "Dori", 17)
 ```
+
+#
+
+## UPDATE
+
+**UPDATE**: Update a row or rows with new values.
+
+```sql
+UPDATE table_name
+SET column1='bob', column2=10
+WHERE column1='jack';
+```
+
+#
+
+## DELETE
+
+**DELETE**: Delete a row or rows.
+
+```sql
+DELETE FROM table_name
+WHERE column1=20;
+```

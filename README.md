@@ -7,6 +7,8 @@ SQL cheat sheet for simple sql commands.
 - [SELECT](#select) - Select data from a table.
   <br>
 - [WHERE](#where) - Add conditions on queries result.
+  <br>
+- [ORDER BY](#order-by) - Sort the result of values.
 
 #
 
@@ -15,7 +17,8 @@ SQL cheat sheet for simple sql commands.
 **SELECT**: Select data from a table.
 
 ```sql
-SELECT column_name FROM table_name;
+SELECT column_name
+FROM table_name;
 ```
 
 <br>
@@ -31,7 +34,8 @@ SELECT * FROM table_name;
 **DISTINCT**: Remove Duplicate values from result.
 
 ```sql
-SELECT DISTINCT column1 FROM table_name;
+SELECT DISTINCT column1
+FROM table_name;
 ```
 
 <br>
@@ -39,7 +43,8 @@ SELECT DISTINCT column1 FROM table_name;
 **COUNT**: Show values count.
 
 ```sql
-SELECT COUNT(column1) FROM table_name;
+SELECT COUNT(column1)
+FROM table_name;
 ```
 
 <br>
@@ -111,6 +116,66 @@ WHERE column1 BETWEEN 3 AND 10;
 SELECT column1
 FROM table_name
 WHERE column1 IN (2, 3, 10, 15);
+```
+
+<br>
+
+#
+
+## ORDER BY
+
+**ASC**: Sort values in ascending order.
+
+```sql
+SELECT *
+FROM table_name
+ORDER BY column1 ASC;
+```
+
+<br>
+
+**DESC**: Sort values in descending order.
+
+```sql
+SELECT *
+FROM table_name
+ORDER BY column1 DESC;
+```
+
+<br>
+
+**MAX**: Return maximum value of column.
+
+```sql
+SELECT MAX(column1)
+FROM table_name;
+```
+
+<br>
+
+**MIN**: Return minimum value of column.
+
+```sql
+SELECT MIN(column1)
+FROM table_name;
+```
+
+<br>
+
+**AVG**: Return average of column values.
+
+```sql
+SELECT AVG(column1)
+FROM table_name;
+```
+
+<br>
+
+**SUM**: Return sum of column values.
+
+```sql
+SELECT SUM(column1)
+FROM table_name;
 ```
 
 <br>

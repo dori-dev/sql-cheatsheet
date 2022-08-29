@@ -11,6 +11,8 @@ SQL cheat sheet for simple sql commands.
 - [ORDER BY](#order-by) - Sort the result of values.
   <br>
 - [LIKE](#like) - Filter values like a pattern.
+  <br>
+- [LIMIT](#limit) - Limit the number of result rows of a query.
 
 #
 
@@ -120,8 +122,6 @@ FROM table_name
 WHERE column1 IN (2, 3, 10, 15);
 ```
 
-<br>
-
 #
 
 ## ORDER BY
@@ -180,8 +180,6 @@ SELECT SUM(column1)
 FROM table_name;
 ```
 
-<br>
-
 #
 
 ## LIKE
@@ -204,4 +202,14 @@ FROM table_name
 WHERE column1 LIKE 'A_f';
 ```
 
-<br>
+#
+
+## LIMIT
+
+**LIMIT**: Limit the number of result rows of a query.
+
+```sql
+SELECT column1
+FROM table_name
+LIMIT 30;
+```

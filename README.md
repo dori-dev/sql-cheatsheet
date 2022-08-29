@@ -33,6 +33,8 @@ SQL cheat sheet for simple sql commands.
 - [CREATE & DROP](#create--drop) - Create and drop a database or table.
   <br>
 - [ALTER](#alter) - Change the table properties.
+  <br>
+- [INDEX](#index) - Add and remove index in table.
 
 #
 
@@ -488,4 +490,32 @@ DROP COLUMN column_name;
 ALTER TABLE table_name
 ALTER COLUMN column_name
     SET DATA TYPE new_data_type;
+```
+
+#
+
+## INDEX
+
+**INDEX**: Index the table.
+
+```sql
+CREATE INDEX index_name
+ON table_name (column_name);
+```
+
+<br>
+
+**UNIQUE INDEX**: Uniquely index the table.
+
+```sql
+CREATE UNIQUE INDEX index_name
+ON table_name (column_name);
+```
+
+<br>
+
+**DROP INDEX**: Remove a table index.
+
+```sql
+DROP INDEX index_name;
 ```

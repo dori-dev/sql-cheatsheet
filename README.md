@@ -35,6 +35,8 @@ SQL cheat sheet for simple sql commands.
 - [ALTER](#alter) - Change the table properties.
   <br>
 - [INDEX](#index) - Add and remove index in table.
+  <br>
+- [CONSTRAINT](#constraint) - Add constraints to table columns.
 
 #
 
@@ -518,4 +520,84 @@ ON table_name (column_name);
 
 ```sql
 DROP INDEX index_name;
+```
+
+#
+
+## CONSTRAINT
+
+**NOT NULL**: The column can't be null.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE NOT NULL
+);
+```
+
+<br>
+
+**UNIQUE**: Creating a unique column, that is, only one of it can be in the table.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE UNIQUE
+);
+```
+
+<br>
+
+**PRIMARY KEY**: Creating a primary key, it's unique, not null and connection point to other tables.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE PRIMARY KEY
+);
+```
+
+<br>
+
+**FOREIGN KEY**: Creating a foreign key, it's connect to another table primary key.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE PRIMARY KEY,
+    column2 DATA TYPE,
+    FOREIGN KEY (column2)
+        REFERENCES other_table(primary_key_column)
+);
+```
+
+<br>
+
+**DEFAULT**: If no value is set for this column, it sets the default value for the columns. The opposite of NOT NULL.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE PRIMARY KEY,
+    column2 DATA TYPE DEFAULT default_value
+);
+```
+
+<br>
+
+**CHECK**: Checked the values of columns they are going to be added.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE,
+    column2 DATA TYPE,
+    CONSTRAINT check_name CHECK (
+        column2 > 30 AND
+        LENGTH(column1) > 3
+    )
+)
+```
+
+<br>
+
+**DROP CONSTRAINT**: Remove a check.
+
+```sql
+ALTER TABLE table_name
+DROP CONSTRAINT check_name;
 ```

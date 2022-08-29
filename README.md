@@ -13,6 +13,8 @@ SQL cheat sheet for simple sql commands.
 - [LIKE](#like) - Filter values like a pattern.
   <br>
 - [LIMIT](#limit) - Limit the number of result rows of a query.
+  <br>
+- [JOIN](#join) - Join the columns of several tables together.
 
 #
 
@@ -212,4 +214,62 @@ WHERE column1 LIKE 'A_f';
 SELECT column1
 FROM table_name
 LIMIT 30;
+```
+
+#
+
+## JOIN
+
+**INNER JOIN**: Merges several columns.
+
+```sql
+SELECT username, product, order_cost
+FROM users
+INNER JOIN products
+    ON users.id = products.user_id
+INNER JOIN orders
+    ON products.id = orders.product_id;
+```
+
+<br>
+
+**LEFT JOIN**: Merges multiple columns and returns null for values that exist in the left column but not in the right column.
+
+```sql
+SELECT username, product
+FROM users
+LEFT JOIN products
+    ON users.id = products.user_id
+```
+
+<br>
+
+**RIGHT JOIN**: Merges multiple columns and returns null for values that exist in the right column but not in the left column.
+
+```sql
+SELECT username, product
+FROM users
+RIGHT JOIN products
+    ON users.id = products.user_id
+```
+
+<br>
+
+**FULL JOIN**: Merges multiple columns and returns all column1 and column2 values, Even if they do not have corresponding values.
+
+```sql
+SELECT username, product
+FROM users
+FULL JOIN products
+    ON users.id = products.user_id
+```
+
+<br>
+
+**SELF JOIN**: Merge the column with itself to compare its own values.
+
+```sql
+SELECT t1.column1, t2.column1
+FROM table1 t1, table1 t2
+WHERE t1.column1 > t2.column1;
 ```

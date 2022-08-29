@@ -9,6 +9,8 @@ SQL cheat sheet for simple sql commands.
 - [WHERE](#where) - Add conditions on queries result.
   <br>
 - [ORDER BY](#order-by) - Sort the result of values.
+  <br>
+- [LIKE](#like) - Filter values like a pattern.
 
 #
 
@@ -176,6 +178,30 @@ FROM table_name;
 ```sql
 SELECT SUM(column1)
 FROM table_name;
+```
+
+<br>
+
+#
+
+## LIKE
+
+**LIKE `%`**: Filter values that contain none or any number of characters instead of `%`.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 LIKE 'A%';
+```
+
+<br>
+
+**LIKE `_`**: Filter values that have exactly one letter instead of `_`.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 LIKE 'A_f';
 ```
 
 <br>

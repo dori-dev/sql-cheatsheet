@@ -1,10 +1,15 @@
 # SQL CheatSheet
 
+SQL cheat sheet for simple sql commands.
+
 # Summary
 
-[SELECT](#select)
+- [SELECT](#select) - Select data from a table.
+  <br>
+- [WHERE](#where) - Add conditions on queries result.
 
 #
+
 ## SELECT
 
 **SELECT**: Select data from a table.
@@ -45,3 +50,67 @@ SELECT COUNT(column1) FROM table_name;
 SELECT column1, (column2 - column3) AS distance
 FROM table_name;
 ```
+
+#
+
+## WHERE
+
+**WHERE**: Add conditions on queries result.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 > 10;
+```
+
+<br>
+
+**AND**: And operator.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 > 10 AND column1 < 3;
+```
+
+<br>
+
+**OR**: Or operator.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 = 10 OR column1 = 3;
+```
+
+<br>
+
+**NOT**: Not operator.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE NOT column1 < 3;
+```
+
+<br>
+
+**BETWEEN**: Select all values between x and y.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 BETWEEN 3 AND 10;
+```
+
+<br>
+
+**IN**: Filter all values in the list.
+
+```sql
+SELECT column1
+FROM table_name
+WHERE column1 IN (2, 3, 10, 15);
+```
+
+<br>

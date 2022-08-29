@@ -31,6 +31,8 @@ SQL cheat sheet for simple sql commands.
 - [SELECT INTO](#select-into) - Select columns from table and insert them in another table.
   <br>
 - [CREATE & DROP](#create--drop) - Create and drop a database or table.
+  <br>
+- [ALTER](#alter) - Change the table properties.
 
 #
 
@@ -422,7 +424,7 @@ DROP DATABASE db_name;
 
 <br>
 
-**CREATE TABLE**: Create a new table.
+**CREATE TABLE**: Create a new table. [All SQL data types](https://www.w3schools.com/sql/sql_datatypes.asp)
 
 ```sql
 CREATE TABLE table_name(
@@ -438,4 +440,52 @@ CREATE TABLE table_name(
 
 ```sql
 DROP TABLE table_name;
+```
+
+#
+
+## ALTER
+
+**RENAME COLUMN**: Rename the column.
+
+```sql
+ALTER TABLE table_name
+RENAME column_old_name TO column_new_name;
+```
+
+<br>
+
+**RENAME TABLE**: Rename the table.
+
+```sql
+ALTER TABLE table_old_name
+RENAME TO table_new_name;
+```
+
+<br>
+
+**CREATE COLUMN**: Add new column to the table.
+
+```sql
+ALTER TABLE table_name
+ADD column_name DATA TYPE;
+```
+
+<br>
+
+**DROP COLUMN**: Remove a column from the table.
+
+```sql
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
+
+<br>
+
+**NEW DATA TYPE**: Change column data type.
+
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name
+    SET DATA TYPE new_data_type;
 ```

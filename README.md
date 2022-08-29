@@ -27,6 +27,10 @@ SQL cheat sheet for simple sql commands.
 - [UPDATE](#update) - Update a row or rows from table.
   <br>
 - [DELETE](#delete) - Delete a row or rows from table.
+  <br>
+- [SELECT INTO](#select-into) - Select columns from table and insert them in another table.
+  <br>
+- [CREATE & DROP](#create--drop) - Create and drop a database or table.
 
 #
 
@@ -376,7 +380,7 @@ WHERE column1=20;
 
 #
 
-## SELECT
+## SELECT INTO
 
 **SELECT INTO**: Backup a table columns and insert in the new table.
 
@@ -396,4 +400,42 @@ INSERT INTO table2
 SELECT column1, column2
 FROM table1
 WHERE column1 > 10;
+```
+
+#
+
+# CREATE & DROP
+
+**CREATE DATABASE**: Create a new database.
+
+```sql
+CREATE DATABASE db_name;
+```
+
+<br>
+
+**DROP DATABASE**: Remove a database.
+
+```sql
+DROP DATABASE db_name;
+```
+
+<br>
+
+**CREATE TABLE**: Create a new table.
+
+```sql
+CREATE TABLE table_name(
+    column1 DATA TYPE,
+    column2 DATA TYPE,
+    column3 DATA TYPE
+);
+```
+
+<br>
+
+**DROP Table**: Remove a table.
+
+```sql
+DROP TABLE table_name;
 ```

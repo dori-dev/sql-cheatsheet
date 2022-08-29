@@ -15,6 +15,8 @@ SQL cheat sheet for simple sql commands.
 - [LIMIT](#limit) - Limit the number of result rows of a query.
   <br>
 - [JOIN](#join) - Join the columns of several tables together.
+  <br>
+- [GROUP BY](#group-by) - Group the same row in column.
 
 #
 
@@ -272,4 +274,16 @@ FULL JOIN products
 SELECT t1.column1, t2.column1
 FROM table1 t1, table1 t2
 WHERE t1.column1 > t2.column1;
+```
+
+#
+
+## GROUP BY
+
+**GROUP BY**: Group the same row in column and return it once.
+
+```sql
+SELECT column1, COUNT(*)
+FROM table_name
+GROUP BY column1
 ```

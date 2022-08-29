@@ -17,6 +17,10 @@ SQL cheat sheet for simple sql commands.
 - [JOIN](#join) - Join the columns of several tables together.
   <br>
 - [GROUP BY](#group-by) - Group the same row in column.
+  <br>
+- [HAVING](#having) - Use having for filter result after group by.
+  <br>
+- [UNION](#union) - Merge two select command.
 
 #
 
@@ -306,4 +310,26 @@ INNER JOIN order_items
 GROUP BY products.name
 HAVING SUM(products.price * order_items.product_count) > 2000
 ORDER BY products.name ASC
+```
+
+#
+
+## UNION
+
+**UNION**: Merge two select and remove same values from result.
+
+```sql
+SELECT column1 FROM table1
+UNION
+SELECT column1 FROM table2;
+```
+
+<br>
+
+**UNION ALL**: Merge two select and don't remove same values from result.
+
+```sql
+SELECT column1 FROM table1
+UNION ALL
+SELECT column1 FROM table2;
 ```

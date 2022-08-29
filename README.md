@@ -21,6 +21,8 @@ SQL cheat sheet for simple sql commands.
 - [HAVING](#having) - Use having for filter result after group by.
   <br>
 - [UNION](#union) - Merge two select command.
+  <br>
+- [INSERT](#insert-into) - Insert a row to a table.
 
 #
 
@@ -332,4 +334,15 @@ SELECT column1 FROM table2;
 SELECT column1 FROM table1
 UNION ALL
 SELECT column1 FROM table2;
+```
+
+#
+
+## INSERT INTO
+
+**INSERT INTO**: Adds a row to the end of the rows of the table, if you don't set a value for a column, it sets null for it.
+
+```sql
+INSERT INTO table_name(column1, column2, column3)
+VALUES ("Mohammad", "Dori", 17)
 ```

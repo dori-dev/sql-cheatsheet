@@ -287,3 +287,23 @@ SELECT column1, COUNT(*)
 FROM table_name
 GROUP BY column1
 ```
+
+#
+
+## HAVING
+
+**HAVING**: When we want add condition after `group by` use having.
+
+```sql
+SELECT
+    products.name,
+    SUM(products.price * order_items.product_count) AS total
+FROM products
+INNER JOIN orders
+    ON  orders.product_id = products.id
+INNER JOIN order_items
+    ON order_items.order_id = orders.id
+GROUP BY products.name
+HAVING SUM(products.price * order_items.product_count) > 2000
+ORDER BY products.name ASC
+```
